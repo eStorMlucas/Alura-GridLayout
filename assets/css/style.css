@@ -1,0 +1,157 @@
+.caixa {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.app {
+    background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 3em auto auto;
+    padding: 0 2rem;
+}
+
+.destaques { 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    gap: .2rem;
+    height: calc(100vh - 50px);
+}
+
+.destaques__principal { 
+    background: url(../img/fortnite.jpg) center / cover no-repeat;
+    grid-row: 1 / 3;
+}
+
+.destaques__secundario:nth-child(2) {
+    background: url(../img/pubg.jpg) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url(../img/slack.png) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url(../img/whatsapp.png) center / cover no-repeat;
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url(../img/cs-go.jpg) center / cover no-repeat;
+}
+
+.destaques__titulo {
+    color: #fdfdfd;
+    text-align: center;
+    background: rgb(0, 0, 0, .5);
+    padding: .6rem;
+}
+
+.destaques__categorias {
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #fdfdfd;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.destaques__categorias___item {
+    align-items: center;
+    color: black transparent;
+    padding: 1rem;
+    width: 50%;
+}
+
+.destaques__categorias___link {
+    color: inherit;
+}
+
+.populares {
+    padding: 3rem 2rem;
+}
+
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.populares__botao {
+    background: transparent;
+    border: none;
+    color: #333;
+}
+
+.populares__card {
+    display: grid;
+    grid-template-areas: "card-imagem" "card-corpo";
+    grid-template-columns: 100%;
+}
+
+.populares__card:last-child {
+    margin-right: 0;   
+}
+
+.populares__conteudo {
+    grid-area: conteudo;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.populares__card___imagem {
+    grid-area: card-imagem;
+    width: 100%;
+    height: 100%;
+}
+
+.populares__card___corpo {
+    padding: .75rem;
+    grid-area: card-corpo;
+    display: grid;
+    gap: .5rem;
+    grid-template-areas: "card-cabecalho" "card-conteudo";
+    grid-template-rows: 50px auto;
+    background: #fdfdfd;
+}
+
+.populares__card___cabecalho {
+    grid-area: "card-cabecalho";
+}
+
+.cabecalho {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+    grid-area: cabecalho;
+}
+
+.menu__link {
+    color: #333;
+    padding: .5rem 1rem;
+}
+
+.menu__link:hover, .menu__link.ativo {
+    border-bottom: 2px solid #0073e6;
+}
+
+.rodape {
+    background: #fdfdfd;
+    color: #333333;
+    font-size: .8rem;
+    grid-area: rodape;
+    padding: 1rem;
+    text-align: center;
+}
